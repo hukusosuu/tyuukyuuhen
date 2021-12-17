@@ -1,0 +1,70 @@
+body{
+    color: $color-main;
+    font-family: $font-ja;
+    overflow-x: hidden;
+}
+
+
+
+.body-inner{
+    overflow-x: hidden;
+    background-color: $color-sub;
+    &.click{
+        transform: translateX(-80%);
+        header{
+            display: none;
+        }
+    }
+}
+
+.body-inner-back{
+    &.click{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.6);
+    z-index: 500;
+    }
+
+}
+
+.click-header{
+    &.click{
+        z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 68px;
+    background-color: #e3e3e3;
+    }
+}
+
+
+a{
+    color: $color-main;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    max-width: 1200px;
+    width: calc(1200*100%/1280);
+    margin: 0 auto;
+    @include mq(sp){
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 100%;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+$color-main: #3E3E3E;
+$color-sub: #F3F3F3;
+$red: #FF4646;
+$blue: #4973FF;
+$yellow: #FFAA3B;
+$white: #FFFFFF;
+$font-color-white: #FFFFFF;
+$font-color-black: #3E3E3E;
+
+$font-en:  'Montserrat', sans-serif;;
+$font-ja: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+
+
+$layout-width-inner: 768px;
+
+
+
+
+$breakpoints: (
+//キー : 値
+'sp': "(max-width: 768px)",
+'tab': "(min-width: 769px) and (max-width: 1200px)",
+'pc': "(min-width: #{$layout-width-inner})"
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: sp) {
+    //map-get(マップ型変数, キー)で値を取得
+@media #{map-get($breakpoints, $breakpoint)} {
+        //この中をカスタムできる
+        @content;
+}
+    }
+
+
+    @import "common";
+    @import "header";
+    @import "main-visual";
+    @import "news";
+    @import "service";
+    @import "results";
+    @import "price";
+    @import "comments";
+    @import "qa";
+    @import "access";
+    @import "contact-us";
+    @import "footer";
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+
+
+.access{
+    width: 100%;
+    height: 640px;
+    position: relative;
+    margin-bottom: 120px;
+    @include mq(sp){
+        position: static;
+        margin-bottom: 0;
+        height: 730px;
+        background-color: #3e3e3e;
+        height: auto;
+        padding-bottom: 60px;
+    }
+    .container{
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        @include mq(tab){
+           bottom: 100px;
+        }
+        @include mq(sp){
+            display: block;
+            position: static;
+            transform: translateX(0%);
+        }
+        .access-text{
+            background-color: inherit;
+            padding-left: 30px;
+            flex: 1;
+            @include mq(sp){
+                width: 100%;
+                padding-left: 0;
+            }
+            h2{
+                font-size: 36px;
+                letter-spacing: 0;
+                font-weight: 600;
+                font-family: $font-en;
+                color: $font-color-white;
+                padding: 0 0 60px;
+                @include mq(sp){
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    font-size: 30px;
+                    line-height: 37px;
+                }
+            }
+            .access-adress{
+                font-size: 16px;
+                line-height: calc(24/16);
+                color: $font-color-white;
+                @include mq(sp){
+                    margin-bottom: 24px;
+                }
+            }
+            a{
+                &:hover{
+                    background-color: $white;
+                    color: $font-color-black;
+                    transition: all 0.5s 0s ease;
+                }
+                transition: all 0.5s 0s ease;
+                margin-top: 32px;
+                width: 314px;
+                height: 64px;
+                display: block;
+                font-size: 20px;
+                letter-spacing: calc(2px/20);
+                font-weight: 600;
+                font-family: $font-en;
+                text-align: center;
+                line-height: 64px;
+                border: 1px solid $white;
+                color: $font-color-white;
+                @include mq(tab){
+                    width: 200px;
+                }
+                @include mq(sp){
+                    display: none;
+                }
+            }
+
+        }
+        .access-map{
+            width: calc(726*100%/1200);
+            max-width: 726px;
+            @include mq(sp){
+                width: 100%;
+            }
+            .access-map-inner{
+                width: 100%;
+                padding-top: calc(520*100%/726);
+                position: relative;
+                iframe{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                }
+            }
+        }
+    }
+    .access-background{
+        width: calc(980*100%/1280);
+        height: 504px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: $color-main;
+        @include mq(sp){
+            position: static;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+    }
+}
+
+
+
+.sp-btn{
+    display: none;
+    @include mq(sp){
+        transition: all 0.5s 0s ease;
+        &:hover{
+            background-color: $white;
+            color: $font-color-black;
+        }
+        display: block;
+        margin-top: 32px;
+                width: 100%;
+                height: 64px;
+                display: block;
+                font-size: 20px;
+                letter-spacing: calc(2px/20);
+                font-weight: 600;
+                font-family: $font-en;
+                text-align: center;
+                line-height: 64px;
+                border: 1px solid $white;
+                color: $font-color-white;
+
+    }
+}

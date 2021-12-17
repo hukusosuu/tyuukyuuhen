@@ -1,0 +1,79 @@
+.price{
+    padding-bottom: 90px;
+    @include mq(sp){
+        padding-bottom: 30px;
+    }
+    .container{
+        h2{
+            font-size: 36px;
+            letter-spacing: 0;
+            font-weight: 600;
+            text-align: center;
+            font-family: $font-en;
+             color: $font-color-black;
+             padding: 0 0 60px;
+             @include mq(tab){
+                 padding-bottom: 40px;
+                 font-size: 30px;
+             }
+             @include mq(sp){
+                 padding-bottom: 40px;
+                 font-size: 30px;
+             }
+        }
+        dl{
+            p{
+                font-size: 12px;
+                text-align-last: left;
+                margin-top: -12px;
+                font-weight: normal;
+                
+                
+            }
+            margin: 0 auto;
+            text-align: center;
+            max-width: 960px;
+            width: calc(960*100%/1200);
+            font-size: 24px;
+            letter-spacing: 0;
+            line-height: 61px;
+            font-weight: 600;
+            @include mq(sp){
+                width: 100%;
+                max-width: none;
+            }
+            .price-row{
+                display: flex;
+                dt{
+                    color: $font-color-white;
+                    background-color: $color-main;
+                    width: calc(262*100%/960);
+                    border: 1px solid #707070;
+                    height: 61px;
+                }
+                dd{
+                    background-color: $white;
+                    text-align: left;
+                    flex: 1;
+                    border: 1px solid #707070;
+                    height: 61px;
+                    padding-left: 40px;
+                    @include mq(sp){
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.price-inner{
+    margin: 0 auto;
+    max-width: 960px;
+    width: calc(960*100%/1200);
+    @include mq(sp){
+        width: 100%;
+                max-width: none;
+    }
+}

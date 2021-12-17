@@ -1,0 +1,78 @@
+.main-visual{
+    margin-top: 83px;
+    @include mq(sp){
+        margin-top: 68px;
+    }
+    height: 565px;
+    width: 100%;
+    background-image: url(../img/pc-img/mv@2x.png);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    .container{
+        .main-visual-text{
+            @include mq(sp){
+                width: 100%;
+                padding-top: 130px;
+            }
+            margin-left: auto;
+            width: 600px;
+            padding-top: 150px;
+            h1{
+                font-size: 32px;
+                line-height: calc(48/32);
+                letter-spacing: calc(0.02px/32);
+                font-weight: bold;
+                margin-bottom: 20px;
+                @include mq(sp){
+                    font-size: 24px;
+                    line-height: calc(40/24);
+                    letter-spacing: 0;
+                }
+            }
+            p{
+                font-size: 18px;
+                line-height: calc(28/18);
+                letter-spacing: calc(0.45px/18);
+                font-weight: bold;
+                @include mq(sp){
+                    font-size: 14px;
+                    letter-spacing: 0;
+                    line-height: calc(20/14);
+                }
+            }
+            a{
+                &:hover{
+                    opacity: 1.5;
+                    transform: translateY(-1px);
+                    background-color: #F18900;
+                    transition: .3s;
+                }
+                transition: .3s;
+                font-size: 18px;
+                line-height: 50px;
+                color: $font-color-white;
+                text-align: center;
+                width: 282px;
+                height: 50px;
+                display: block;
+                background-color: $yellow;
+                border-radius: 10px;
+                font-weight: bold;
+                letter-spacing: calc(0.45px/18);
+                margin-top: 37px;
+                box-shadow: 0 3px 5px #3E3E3E33;
+                @include mq(sp){
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-size: 16px;
+                    line-height: 3;
+                    letter-spacing: 0;
+                    width: 222px;
+                    height: 48px;
+                    color: $font-color-white;
+                }
+            }
+        }
+    }
+}

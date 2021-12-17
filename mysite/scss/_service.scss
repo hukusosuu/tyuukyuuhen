@@ -1,0 +1,80 @@
+.service{
+    background-color: $color-main;
+    padding-top: 60px;
+    height: 400px;
+    margin-bottom: 210px;
+    @include mq(sp){
+        padding-top: 40px;
+        height: 480px;
+        margin-bottom: 391px;
+    }
+    h2{
+        font-size: 36px;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 600;
+            font-family: $font-en;
+             color: $font-color-white;
+             margin-bottom: 65px;
+             margin-top: 4px;
+             @include mq(sp){
+                 font-size: 30px;
+                 margin-bottom: 40px;
+             }
+    }
+    .inner{
+        box-shadow: 0 5px 12px #3E3E3E33;
+        background-color: $white;
+        display: flex;
+        max-width: 960px;
+        width: calc(960*100%/1280);
+        margin: 0 auto;
+        z-index: 2;
+        @include mq(sp){
+            display: block;
+        }
+        .service-item{
+            @include mq(sp){
+                padding: 40px 16px;
+                &:nth-child(2){
+                    padding: 0 16px;
+                }
+            }
+            @include mq(tab){
+                padding: 60px 35px;
+            }
+            padding: 60px 45px;
+            text-align: center;
+            width: calc(33.3%-270px/3);
+            img{
+                width: 56px;
+                height: 56px;
+            }
+            h3{
+                font-family: $font-en;
+                font-weight: 600;
+                padding-top: 8px;
+                padding-bottom: 15px;
+                font-size: 20px;
+                line-height: calc(28/20);
+                letter-spacing: calc(20px/4);
+                @include mq(sp){
+                line-height: calc(24/20);
+                }
+            }
+            p{
+                font-size: 14px;
+                line-height: calc(24/14);
+                letter-spacing: 0;
+                text-align-last: left;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 415px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+    .service{
+        margin-bottom: 451px;
+    }
+}

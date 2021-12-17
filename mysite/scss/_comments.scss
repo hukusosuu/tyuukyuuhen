@@ -1,0 +1,148 @@
+.comments{
+    height: 724px;
+    width: 100%;
+    position: relative;
+    .container{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        @include mq(sp){
+            display: block;
+        }
+        .comments-text{
+            box-shadow: 0 0 10px #00000029;
+            background-color: $white;
+            padding: 120px 60px;
+            width: calc(666*100%/1200);
+            @include mq(tab){
+                padding: 60px 40px;
+            }
+            @include mq(sp){
+                width: 100%;
+                padding: 40px 20px;
+            }
+            h2{
+                font-size: 36px;
+                letter-spacing: 0;
+                font-weight: 600;
+                font-family: $font-en;
+                 color: $font-color-black;
+                 padding-bottom: 60px;
+                 @include mq(sp){
+                     font-size: 30px;
+                     line-height:37px;
+                     padding-bottom: 40px;
+                 }
+            }
+            .comments-item-row{
+                &:nth-child(2){
+                    margin-bottom: 60px;
+                }
+                display: flex;
+                align-items: center;
+            }
+
+
+        }
+        .comments-img{
+            flex: 1;
+            @include mq(sp){
+                display: none;
+            }
+        }
+    }
+}
+
+.comments-item-img{
+    width: 100px;
+    height: 100px;
+    margin-right: 32px;
+    @include mq(tab){
+        width: 60px;
+        height: 60px;
+    }
+    @include mq(sp){
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.comments-item-text{
+    font-size: 16px;
+    line-height: calc(24/16);
+    letter-spacing: 0;
+}
+
+.comments-background{
+    width: calc(980*100%/1280);
+    height: 576px;
+    background-color: $color-main;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    @include mq(sp){
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width:947px) and (max-width:1200px) {
+    /*tablet用のcssを記述*/
+    .comments{
+        height: 524px;
+        }
+    }
+    @media only screen and (min-width:823px) and (max-width:946px) {
+        /*tablet用のcssを記述*/
+        .comments{
+            height: 534px;
+            }
+        }
+        @media only screen and (min-width:769px) and (max-width:822px) {
+            /*tablet用のcssを記述*/
+            .comments{
+                height: 590px;
+                }
+            }
+            @media only screen and (min-width:485px) and (max-width:768px) {
+                /*tablet用のcssを記述*/
+                .comments-background{
+                    height: 370px;
+                    }
+                .comments{
+                    height: 470px;
+                }
+                }
+                @media only screen and (min-width:388px) and (max-width:484px) {
+                    /*tablet用のcssを記述*/
+                    .comments{
+                        height: 550px;
+                        }
+                        .comments-background{
+                            height: 450px;
+                        }
+                    }
+                    @media only screen and (min-width:356px) and (max-width:387px) {
+                        /*tablet用のcssを記述*/
+                        .comments{
+                            height: 590px;
+                            }
+                            .comments-background{
+                                height: 490px;
+                            }
+                        }
+                        @media only screen and (min-width:320px) and (max-width:355px) {
+                            /*tablet用のcssを記述*/
+                            .comments{
+                                height: 670px;
+                                }
+                                .comments-background{
+                                    height: 570px;
+                                }
+                            }
+
+
