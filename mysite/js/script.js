@@ -29,6 +29,7 @@ $(function(){
 });
 $(".ac-menu").on("click", function() {
     $(this).next().slideToggle();
+    $(this).toggleClass("click");
     });
     jQuery('a[href^="#"]').on('click', function() {
         var header = jQuery('.header').innerHeight();
@@ -57,6 +58,6 @@ $(".ac-menu").on("click", function() {
           $(this).children('img').attr("src", "img/pc-img/plus.svg");
         }
         });
-    });
+  });
 
 
